@@ -1,0 +1,6 @@
+{
+  "name": "blog",
+  "scripts": {
+    "build": "hugo --minify"
+  }
+}

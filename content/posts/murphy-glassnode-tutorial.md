@@ -65,7 +65,7 @@ Murphy 特别强调牛熊思维的切换：
 
 > MVRV 本质上代表资金和成本的相互关系。BTC 十多年来始终遵循 MVRV 和现货价格大级别背离的原则，即一旦出现价格更高但 MVRV 却更低的背离现象，后面指标就无法突破前高，随后价格的空间就被压制。
 
-![MVRV 背离分析](/images/murphy/mvrv-back divergence.jpg)
+![MVRV 背离分析](/images/murphy/mvrv-backdivergence.jpg)
 
 **使用方法**：
 - **MVRV > 1**：市场整体浮盈，越高泡沫越大

@@ -28,7 +28,7 @@ style = "dracula"
 tabWidth = 2
 
 [author]
-name = "Dongbin"
+name = "0x"
 bio = "记录技术与生活"
 
 [params]
@@ -44,7 +44,7 @@ navItems = [
 ]
 
 [params.author]
-name = "Dongbin"
+name = "0x"
 bio = "记录技术与生活"
 
 [params.cc]
@@ -52,5 +52,5 @@ name = "署名 - 非商业性使用 4.0 国际 (CC BY-NC 4.0)"
 link = "https://creativecommons.org/licenses/by-nc/4.0/deed.zh"
 
 [params.social]
-github = "dongbin"
+github = "0x"
 rss = "/atom.xml"

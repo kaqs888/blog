@@ -1,20 +1,10 @@
 baseURL = "https://blog.gocache.top/"
 languageCode = "zh-cn"
-title = "DongBin's Blog"
+title = "价格行为"
 theme = "echo"
 DefaultContentLanguage = "cn"
 hasCJKLanguage = true
 uglyURLs = true
-enableRobotsTXT = true
-
-[markup.highlight]
-codeFences = true
-guessSyntax = true
-lineNos = true
-lineNumbersInTable = true
-noClasses = true
-style = "dracula"
-tabWidth = 2
 
 [permalinks]
 posts = "/:filename"
@@ -26,34 +16,37 @@ baseName = "atom"
 [services.rss]
 limit = 20
 
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+style = "dracula"
+tabWidth = 2
+
 [author]
 name = "Dongbin"
 bio = "记录技术与生活"
 
 [params]
 htmlClass = "dark"
-keywords = "技术, 美股, 投资, 编程, DongBin"
-description = "DongBin 的个人博客，记录技术与生活"
 toc = true
+rssFullContent = true
+uglyURLs = true
 navItems = [
   ["首页", "/"],
   ["文章归档", "/posts.html"],
   ["标签", "/tags.html"],
-  ["关于我", "/about.html"],
+  ["关于我", "/about.html"]
 ]
-rssFullContent = true
-uglyURLs = true
-busuanzi = false
-staticCDNPrefix = "https://cdn.bootcss.com/font-awesome/5.11.2"
 
 [params.cc]
-name = "署名-非商业性使用 4.0 国际 (CC BY-NC 4.0)"
+name = "署名 - 非商业性使用 4.0 国际 (CC BY-NC 4.0)"
 link = "https://creativecommons.org/licenses/by-nc/4.0/deed.zh"
 
-[params.social]
+[social]
 github = "dongbin"
 rss = "/atom.xml"
-
-[params.author]
-name = "Dongbin"
-bio = "记录技术与生活"

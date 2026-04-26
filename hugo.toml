@@ -43,10 +43,14 @@ navItems = [
   ["关于我", "/about.html"]
 ]
 
+[params.author]
+name = "Dongbin"
+bio = "记录技术与生活"
+
 [params.cc]
 name = "署名 - 非商业性使用 4.0 国际 (CC BY-NC 4.0)"
 link = "https://creativecommons.org/licenses/by-nc/4.0/deed.zh"
 
-[social]
+[params.social]
 github = "dongbin"
 rss = "/atom.xml"

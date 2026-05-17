@@ -1,0 +1,22 @@
+<div class="lg:w-full mx-auto items-center justify-between mt-5">
+  <div class="bg-white shadow rounded overflow-hidden dark:bg-gray-800">
+    <div class="p-4 border-b border-gray-300 dark:border-gray-700">
+      <p class="text-base font-bold">分类</p>
+    </div>
+    <div class="p-4">
+      {{ $base := .Site.BaseURL }}
+      {{ $ugly := .Site.Params.uglyURLs }}
+      {{ if isset .Site.Taxonomies "categories" }}
+        {{ range $name, $cat := .Site.Taxonomies.categories.Alphabetical }}
+          <a href="{{ $base }}/categories/{{ $cat.Name | urlize }}{{ if $ugly }}.html{{ end }}"
+             class="flex justify-between py-1 text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 no-underline">
+            <span>{{ with $cat.Page }}{{ .Title }}{{ else }}{{ $cat.Name }}{{ end }}</span>
+            <span class="text-gray-500">({{ $cat.Count }})</span>
+          </a>
+        {{ end }}
+      {{ else }}
+        <p class="text-sm text-gray-500">暂无分类</p>
+      {{ end }}
+    </div>
+  </div>
+</div>

@@ -5,19 +5,29 @@
   {{ with .Params.categories }}{{ $cat := index . 0 }}<a href="/categories/{{ $cat | urlize }}.html">{{ $cat }}</a><span class="sep">/</span>{{ end }}
   <span class="cur">{{ .Title }}</span>
 </div>
-<div class="pa-chapter-meta">
-  {{ with .Params.categories }}{{ index . 0 | upper }} · {{ end }}{{ .Date.Format "2006-01-02" }}
+
+<div class="pa-layout">
+  <article class="pa-article">
+    <div class="pa-chapter-meta">
+      {{ with .Params.categories }}{{ index . 0 | upper }}{{ end }} · {{ .Date.Format "2006-01-02" }}
+    </div>
+    <h1 class="pa-title">{{ .Title }}</h1>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+    <nav class="pa-chapter-nav">
+      <div class="prev">
+        {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span class="label">← 上一篇</span><span class="title">{{ .Title }}</span></a>{{ end }}
+      </div>
+      <div class="next">
+        {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span class="label">下一篇 →</span><span class="title">{{ .Title }}</span></a>{{ end }}
+      </div>
+    </nav>
+  </article>
+
+  <aside class="pa-toc">
+    <div class="pa-toc-title">本页目录</div>
+    <div class="pa-toc-body">{{ .TableOfContents }}</div>
+  </aside>
 </div>
-<h1 class="pa-title">{{ .Title }}</h1>
-<article class="post-content">
-  {{ .Content }}
-</article>
-<nav class="pa-chapter-nav">
-  <div class="prev">
-    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><span class="label">← 上一篇</span><span class="title">{{ .Title }}</span></a>{{ end }}
-  </div>
-  <div class="next">
-    {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><span class="label">下一篇 →</span><span class="title">{{ .Title }}</span></a>{{ end }}
-  </div>
-</nav>
 {{ end }}

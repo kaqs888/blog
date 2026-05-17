@@ -56,9 +56,62 @@ body.is-single-post .pa-nav a:hover { color: var(--pa-accent); }
 
 /* Main column */
 body.is-single-post .pa-main {
-  max-width: 880px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 48px 40px 80px;
+  padding: 36px 40px 80px;
+}
+
+/* Two-column layout: article + sticky TOC */
+body.is-single-post .pa-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 56px;
+  margin-top: 8px;
+}
+body.is-single-post .pa-article { min-width: 0; max-width: 800px; }
+
+/* Right-side sticky TOC */
+body.is-single-post .pa-toc {
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  font-size: 13px;
+  line-height: 1.65;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  padding-left: 16px;
+  border-left: 1px solid var(--pa-border);
+}
+body.is-single-post .pa-toc-title {
+  font-family: Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pa-text-faint);
+  margin-bottom: 12px;
+}
+body.is-single-post .pa-toc-body ul,
+body.is-single-post .pa-toc-body ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.is-single-post .pa-toc-body li { margin: 4px 0; }
+body.is-single-post .pa-toc-body a {
+  color: var(--pa-text-dim);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: block;
+  padding: 2px 0;
+}
+body.is-single-post .pa-toc-body a:hover { color: var(--pa-accent); }
+body.is-single-post .pa-toc-body ul ul {
+  padding-left: 14px;
+  margin-top: 2px;
+}
+body.is-single-post .pa-toc-body ul ul a {
+  font-size: 12.5px;
+  color: var(--pa-text-faint);
 }
 
 /* Breadcrumb */
@@ -169,34 +222,51 @@ body.is-single-post .post-content code {
   padding: 1px 6px;
   border-radius: 3px;
 }
-body.is-single-post .post-content pre,
-body.is-single-post .post-content .highlight,
-body.is-single-post .post-content .highlight pre,
-body.is-single-post .post-content .chroma {
-  background: var(--pa-bg-card-hi) !important;
-  color: var(--pa-text) !important;
-  border: 1px solid var(--pa-border);
-  border-radius: 4px;
-  overflow-x: auto;
-}
+/* Code blocks as shadowed cream cards */
 body.is-single-post .post-content pre,
 body.is-single-post .post-content .highlight pre {
-  padding: 14px 18px;
+  background: var(--pa-bg-card) !important;
+  color: var(--pa-text) !important;
+  border: 1px solid var(--pa-border);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  box-shadow: 0 1px 3px rgba(58, 50, 30, 0.06), 0 4px 12px rgba(58, 50, 30, 0.05);
 }
-body.is-single-post .post-content pre code {
+body.is-single-post .post-content .highlight {
+  background: transparent !important;
+  margin: 0;
+  border-radius: 0;
+}
+body.is-single-post .post-content pre code,
+body.is-single-post .post-content .highlight pre code {
   background: transparent;
   padding: 0;
   color: var(--pa-text);
+  font-size: inherit;
+  font-family: inherit;
 }
 /* Drop dracula colors so cream theme stays readable */
 body.is-single-post .post-content .chroma * {
   color: var(--pa-text) !important;
   background: transparent !important;
 }
-body.is-single-post .post-content .chroma .lnt,
-body.is-single-post .post-content .chroma .ln {
-  color: var(--pa-text-faint) !important;
+/* Safety: kill any leftover line-number table styling */
+body.is-single-post .post-content .highlight table {
+  width: 100%;
+  border-collapse: collapse;
 }
+body.is-single-post .post-content .highlight table td {
+  border: none !important;
+  padding: 0;
+}
+body.is-single-post .post-content .highlight table .lntable { border: none; }
+body.is-single-post .post-content .highlight .ln,
+body.is-single-post .post-content .highlight .lnt { display: none !important; }
 
 /* Shortcodes: translator-note */
 body.is-single-post .post-content .translator-note {
@@ -321,6 +391,13 @@ body.is-single-post .pa-footer {
   font-family: Menlo, monospace;
   letter-spacing: 0.05em;
   text-align: center;
+}
+
+/* Mobile / narrow: collapse to single column, hide TOC */
+@media (max-width: 900px) {
+  body.is-single-post .pa-layout { grid-template-columns: 1fr; }
+  body.is-single-post .pa-toc { display: none; }
+  body.is-single-post .pa-main { padding: 24px 18px 60px; }
 }
 
 /* Mobile */

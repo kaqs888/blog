@@ -1,6 +1,6 @@
 baseURL = "https://blog.gocache.top/"
 languageCode = "zh-cn"
-title = "以交易为生的成长过程"
+title = "价格行为"
 theme = "echo"
 DefaultContentLanguage = "cn"
 hasCJKLanguage = true

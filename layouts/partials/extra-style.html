@@ -56,17 +56,17 @@ body.is-single-post .post-content {
 }
 body.is-single-post .post-content h1 {
   font-size: 32px; font-weight: 600; color: var(--pa-text);
-  margin: 32px 0 8px; letter-spacing: -0.01em;
+  margin: 32px 0 8px !important; letter-spacing: -0.01em;
 }
 body.is-single-post .post-content h2 {
   font-size: 22px; font-weight: 600; color: var(--pa-text);
-  margin: 48px 0 16px; padding-bottom: 8px;
+  margin: 40px 0 14px !important; padding-bottom: 8px !important;
   border-bottom: 1px solid var(--pa-border);
 }
 body.is-single-post .post-content h3 {
   font-size: 17px; font-weight: 600; color: var(--pa-text);
-  margin: 32px 0 12px;
-  padding: 8px 14px;
+  margin: 28px 0 10px !important;
+  padding: 7px 12px !important;
   border-left: 3px solid var(--pa-accent);
   background: linear-gradient(to right, var(--pa-bg-card-hi) 0%, var(--pa-bg-card-hi) 30%, transparent 100%);
   border-radius: 0 4px 4px 0;
@@ -75,14 +75,20 @@ body.is-single-post .post-content h4 {
   font-size: 15px;
   font-weight: 700;
   color: var(--pa-accent);
-  margin: 22px 0 8px;
-  padding: 0;
+  margin: 18px 0 6px !important;
+  padding: 0 !important;
   background: none;
   border: 0;
   border-radius: 0;
 }
+/* Neutralize theme's :target padding-top (was 5rem, causing huge gap on TOC jump) */
+body.is-single-post .post-content h2:target,
+body.is-single-post .post-content h3:target {
+  padding-top: 0 !important;
+  scroll-margin-top: 6rem;
+}
 body.is-single-post .post-content p {
-  margin: 16px 0; color: var(--pa-text-dim); font-size: 15.5px;
+  margin: 12px 0 !important; color: var(--pa-text-dim); font-size: 15.5px;
 }
 body.is-single-post .post-content p strong,
 body.is-single-post .post-content li strong {
@@ -92,23 +98,54 @@ body.is-single-post .post-content em { color: var(--pa-text); font-style: italic
 body.is-single-post .post-content blockquote {
   background: var(--pa-bg-card);
   border-left: 3px solid var(--pa-accent-violet);
-  padding: 14px 20px;
-  margin: 20px 0;
+  padding: 14px 20px !important;
+  margin: 16px 0 !important;
   border-radius: 0 4px 4px 0;
   color: var(--pa-text-dim);
 }
-body.is-single-post .post-content blockquote p { margin: 6px 0; }
+body.is-single-post .post-content blockquote p { margin: 6px 0 !important; }
 body.is-single-post .post-content ul,
 body.is-single-post .post-content ol {
-  margin: 14px 0 14px 24px; color: var(--pa-text-dim);
+  margin: 10px 0 !important;
+  padding: 0 0 0 24px !important;
+  color: var(--pa-text-dim);
+}
+body.is-single-post .post-content ul ul,
+body.is-single-post .post-content ol ol,
+body.is-single-post .post-content ul ol,
+body.is-single-post .post-content ol ul {
+  margin: 4px 0 !important;
+  padding-left: 22px !important;
 }
 body.is-single-post .post-content li {
-  margin: 6px 0; font-size: 15px; line-height: 1.7;
+  margin: 4px 0 !important; padding: 0;
+  font-size: 15px; line-height: 1.7;
+}
+body.is-single-post .post-content li::marker { color: var(--pa-text-faint); }
+/* Tighten the gap when a list / paragraph / blockquote is immediately followed by an h2 */
+body.is-single-post .post-content ul + h2,
+body.is-single-post .post-content ol + h2,
+body.is-single-post .post-content p + h2,
+body.is-single-post .post-content blockquote + h2,
+body.is-single-post .post-content .highlight + h2,
+body.is-single-post .post-content pre + h2 {
+  margin-top: 32px !important;
+}
+body.is-single-post .post-content ul + h3,
+body.is-single-post .post-content ol + h3,
+body.is-single-post .post-content p + h3,
+body.is-single-post .post-content blockquote + h3 {
+  margin-top: 22px !important;
+}
+body.is-single-post .post-content h2 + h3,
+body.is-single-post .post-content h3 + h4,
+body.is-single-post .post-content h2 + h4 {
+  margin-top: 12px !important;
 }
 body.is-single-post .post-content hr {
   border: none;
   border-top: 1px solid var(--pa-border);
-  margin: 32px 0;
+  margin: 24px 0 !important;
 }
 body.is-single-post .post-content code {
   font-family: Menlo, monospace;

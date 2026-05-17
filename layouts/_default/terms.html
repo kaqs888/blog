@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="w-full lg:w-3/4 xl:w-3/4">
+  <div class="p-8 mt-6 lg:mt-0 leading-normal rounded shadow bg-white dark:bg-gray-800 dark:text-gray-200">
+    <p class="font-bold text-3xl pb-4">
+      {{ if eq .Data.Plural "categories" }}分类{{ else if eq .Data.Plural "tags" }}标签{{ else }}{{ .Title }}{{ end }}
+    </p>
+    {{ $base := .Site.BaseURL }}
+    {{ $ugly := .Site.Params.uglyURLs }}
+    <div class="flex flex-wrap gap-3">
+      {{ range $name, $taxonomy := .Data.Terms.Alphabetical }}
+        <a href="{{ $base }}/{{ $.Data.Plural }}/{{ $taxonomy.Name | urlize }}{{ if $ugly }}.html{{ end }}"
+           class="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-4 py-2 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 mr-2 mb-2">
+          {{ $taxonomy.Name }} <span class="text-sm text-gray-500">({{ $taxonomy.Count }})</span>
+        </a>
+      {{ end }}
+    </div>
+    {{ if eq (len .Data.Terms) 0 }}
+      <p class="text-gray-600">暂无{{ if eq .Data.Plural "categories" }}分类{{ else }}内容{{ end }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<div class="hidden md:block w-full lg:w-1/4 xl:w-1/4 px-6 leading-normal">
+  {{ partial "posts/profile.html" . }}
+</div>
+{{ end }}

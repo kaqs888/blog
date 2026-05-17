@@ -38,9 +38,9 @@ rssFullContent = true
 uglyURLs = true
 navItems = [
   ["首页", "/"],
-  ["文章归档", "/posts.html"],
-  ["标签", "/tags.html"],
-  ["分类", "/categories.html"],
+  ["文章归档", "/posts/"],
+  ["标签", "/tags/"],
+  ["分类", "/categories/"],
   ["关于我", "/about.html"]
 ]
 

@@ -1,7 +1,8 @@
 <style>
-/* === Brooks Trilogy typography for single post pages === */
+/* === Brooks Trilogy single-post layout (cream, single-column) === */
 body.is-single-post {
   --pa-bg: #f5f1e8;
+  --pa-bg-elev: #ebe5d6;
   --pa-bg-card: #fbf8f0;
   --pa-bg-card-hi: #f3eedf;
   --pa-bg-tn: #f3ede0;
@@ -14,21 +15,89 @@ body.is-single-post {
   --pa-accent-violet: #6b4fa3;
   --pa-en-color: #5a6b85;
   --pa-tn-color: #8b6f3f;
-  background: var(--pa-bg) !important;
+
+  margin: 0;
+  background: var(--pa-bg);
+  color: var(--pa-text-dim);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
 }
-body.is-single-post,
-body.is-single-post .dark\:bg-gray-800,
-body.is-single-post .dark\:text-gray-300,
-body.is-single-post .dark\:text-gray-100,
-body.is-single-post .dark\:text-gray-400 {
-  background-color: transparent !important;
-  color: var(--pa-text-dim) !important;
+
+/* Brand bar */
+body.is-single-post .pa-brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  border-bottom: 1px solid var(--pa-border);
+  background: var(--pa-bg);
 }
-body.is-single-post section > div.rounded.shadow {
-  background: var(--pa-bg-card) !important;
-  border: 1px solid var(--pa-border);
-  box-shadow: none !important;
+body.is-single-post .pa-brand {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--pa-text);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.15s;
 }
+body.is-single-post .pa-brand:hover { color: var(--pa-accent); }
+body.is-single-post .pa-nav {
+  display: flex;
+  gap: 18px;
+}
+body.is-single-post .pa-nav a {
+  font-size: 13px;
+  color: var(--pa-text-faint);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+body.is-single-post .pa-nav a:hover { color: var(--pa-accent); }
+
+/* Main column */
+body.is-single-post .pa-main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+/* Breadcrumb */
+body.is-single-post .pa-breadcrumb {
+  color: var(--pa-text-faint);
+  font-family: Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+body.is-single-post .pa-breadcrumb a {
+  color: var(--pa-text-faint);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+body.is-single-post .pa-breadcrumb a:hover { color: var(--pa-accent); }
+body.is-single-post .pa-breadcrumb .sep { margin: 0 8px; color: var(--pa-border-hi); }
+body.is-single-post .pa-breadcrumb .cur { color: var(--pa-text-dim); }
+
+/* Chapter meta */
+body.is-single-post .pa-chapter-meta {
+  color: var(--pa-text-faint);
+  font-family: Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Title */
+body.is-single-post .pa-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--pa-text);
+  letter-spacing: -0.01em;
+  margin: 0 0 32px;
+}
+
+/* Post content typography */
 body.is-single-post .post-content {
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 16px;
@@ -36,7 +105,7 @@ body.is-single-post .post-content {
   color: var(--pa-text-dim);
 }
 body.is-single-post .post-content h1 {
-  font-size: 32px; font-weight: 600; color: var(--pa-text);
+  font-size: 28px; font-weight: 600; color: var(--pa-text);
   margin: 32px 0 8px; letter-spacing: -0.01em;
 }
 body.is-single-post .post-content h2 {
@@ -59,7 +128,18 @@ body.is-single-post .post-content p strong,
 body.is-single-post .post-content li strong {
   color: var(--pa-text); font-weight: 600;
 }
-body.is-single-post .post-content em { color: var(--pa-text); font-style: italic; }
+body.is-single-post .post-content em {
+  color: var(--pa-text);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+body.is-single-post .post-content a {
+  color: var(--pa-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.3);
+  transition: border-color 0.15s;
+}
+body.is-single-post .post-content a:hover { border-bottom-color: var(--pa-accent); }
 body.is-single-post .post-content blockquote {
   background: var(--pa-bg-card);
   border-left: 3px solid var(--pa-accent-violet);
@@ -91,19 +171,34 @@ body.is-single-post .post-content code {
 }
 body.is-single-post .post-content pre,
 body.is-single-post .post-content .highlight,
-body.is-single-post .post-content .highlight pre {
+body.is-single-post .post-content .highlight pre,
+body.is-single-post .post-content .chroma {
   background: var(--pa-bg-card-hi) !important;
   color: var(--pa-text) !important;
   border: 1px solid var(--pa-border);
   border-radius: 4px;
-  padding: 14px 18px;
   overflow-x: auto;
+}
+body.is-single-post .post-content pre,
+body.is-single-post .post-content .highlight pre {
+  padding: 14px 18px;
 }
 body.is-single-post .post-content pre code {
   background: transparent;
   padding: 0;
   color: var(--pa-text);
 }
+/* Drop dracula colors so cream theme stays readable */
+body.is-single-post .post-content .chroma * {
+  color: var(--pa-text) !important;
+  background: transparent !important;
+}
+body.is-single-post .post-content .chroma .lnt,
+body.is-single-post .post-content .chroma .ln {
+  color: var(--pa-text-faint) !important;
+}
+
+/* Shortcodes: translator-note */
 body.is-single-post .post-content .translator-note {
   background: var(--pa-bg-tn);
   border: 1px dashed var(--pa-border-hi);
@@ -123,6 +218,8 @@ body.is-single-post .post-content .translator-note::before {
   letter-spacing: 0.1em;
   padding: 2px 8px;
 }
+
+/* Shortcodes: quote-bi */
 body.is-single-post .post-content .quote-bi {
   background: var(--pa-bg-card);
   border-left: 3px solid var(--pa-accent-violet);
@@ -145,6 +242,8 @@ body.is-single-post .post-content .quote-bi .src {
   color: var(--pa-text-faint);
   text-transform: uppercase; letter-spacing: 0.05em;
 }
+
+/* Shortcodes: fig-card */
 body.is-single-post .post-content .fig-card {
   margin: 32px 0;
   background: var(--pa-bg-card);
@@ -171,5 +270,74 @@ body.is-single-post .post-content .fig-card figcaption .fig-en {
   color: var(--pa-en-color); font-family: Georgia, serif;
   font-style: italic; font-size: 12px;
   display: block; margin-top: 6px;
+}
+
+/* Chapter nav */
+body.is-single-post .pa-chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--pa-border);
+}
+body.is-single-post .pa-chapter-nav .next { text-align: right; }
+body.is-single-post .pa-chapter-nav a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--pa-bg-card);
+  border: 1px solid var(--pa-border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--pa-text-dim);
+  transition: all 0.15s;
+}
+body.is-single-post .pa-chapter-nav a:hover {
+  background: var(--pa-bg-card-hi);
+  border-color: var(--pa-border-hi);
+}
+body.is-single-post .pa-chapter-nav .label {
+  display: block;
+  font-family: Menlo, monospace;
+  font-size: 11px;
+  color: var(--pa-text-faint);
+  letter-spacing: 0.1em;
+}
+body.is-single-post .pa-chapter-nav .title {
+  display: block;
+  font-size: 14px;
+  color: var(--pa-text);
+  margin-top: 4px;
+}
+
+/* Footer */
+body.is-single-post .pa-footer {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  border-top: 1px solid var(--pa-border);
+  color: var(--pa-text-faint);
+  font-size: 12px;
+  font-family: Menlo, monospace;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  body.is-single-post .pa-brand-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 18px;
+  }
+  body.is-single-post .pa-main {
+    padding: 24px 18px 60px;
+  }
+  body.is-single-post .pa-title { font-size: 26px; }
+  body.is-single-post .pa-chapter-nav {
+    grid-template-columns: 1fr;
+  }
+  body.is-single-post .pa-chapter-nav .next { text-align: left; }
+  body.is-single-post .pa-footer { padding: 32px 18px; }
 }
 </style>

@@ -22,11 +22,7 @@ draft = false
 - 来回拉扯
 - 缺少持续 follow-through
 
-本质：
-
-> 市场接受当前价值区，不愿离开。
-
----
+**本质**：市场接受当前价值区，不愿离开。
 
 ### Imbalance（失衡）
 
@@ -40,21 +36,15 @@ draft = false
 - pullback 弱
 - breakout 有 follow-through
 
-本质：
-
-> 市场正在接受更高/更低价格。
-
----
+**本质**：市场正在接受更高/更低价格。
 
 ## 2. Spike 是什么
 
 Spike 不是普通上涨/下跌。
 
-Spike 是：
+**Spike 是**：imbalance 的突然爆发。
 
-> imbalance 的突然爆发。
-
-代表：
+**代表**：
 
 - 流动性被抽空
 - 一方急于成交
@@ -66,8 +56,6 @@ Spike 是：
 - 连续趋势 K
 - overlap 很少
 - 快速离开区间
-
----
 
 ## 3. 为什么 strong spike 常有 second leg
 
@@ -87,25 +75,15 @@ Spike
 → second leg
 ```
 
----
-
 ## 4. Pullback 的真正意义
 
 Pullback 不等于反转。
 
-很多时候只是：
+很多时候只是：**市场暂停 / 测试**。
 
-> 市场暂停 / 测试。
+**真正关键不是**：*"有没有回调"*
 
-真正关键不是：
-
-> "有没有回调"
-
-而是：
-
-> "回调后控制权有没有改变"
-
----
+**而是**：*"回调后控制权有没有改变"*
 
 ## 5. Overlap 应该怎么理解
 
@@ -122,13 +100,7 @@ overlap 多 = 一定差
 - channel 本来就会 overlap
 - 趋势后期 overlap 会增加
 
----
-
-真正关键：
-
-> overlap 有没有让市场重新平衡。
-
----
+**真正关键**：overlap 有没有让市场重新平衡。
 
 ### 健康趋势里的 overlap
 
@@ -139,11 +111,7 @@ overlap 多 = 一定差
 - 缺少强反向 follow-through
 - 趋势还能继续推进
 
-说明：
-
-> 市场只是休息，控制权没变。
-
----
+**说明**：市场只是休息，控制权没变。
 
 ### 失效趋势里的 overlap
 
@@ -155,11 +123,7 @@ overlap 多 = 一定差
 - 强反向 breakout
 - 双方都能持续推进
 
-说明：
-
-> 市场重新平衡了。
-
----
+**说明**：市场重新平衡了。
 
 ## 6. Breakout / Follow-through / Confirmation
 
@@ -171,25 +135,17 @@ Breakout
 → Confirmation
 ```
 
----
-
 ### Breakout
 
 市场尝试离开当前平衡区。
 
-但：
-
-> breakout 本身不代表成功。
+**但**：breakout 本身不代表成功。
 
 因为 TR 中大多数 breakout 都会失败。
 
----
-
 ### Follow-through
 
-真正关键：
-
-> breakout 后有没有新的力量继续推动。
+**真正关键**：breakout 后有没有新的力量继续推动。
 
 看：
 
@@ -198,15 +154,11 @@ Breakout
 - 不回区间
 - 趋势 bar 继续出现
 
----
-
 ### Confirmation
 
 confirmation 不是固定形态。
 
-而是：
-
-> 市场持续接受 breakout 后的价格。
+**而是**：市场持续接受 breakout 后的价格。
 
 表现：
 
@@ -215,17 +167,11 @@ confirmation 不是固定形态。
 - pullback 失败
 - 趋势延续
 
----
-
 ## 7. Gap（缺口）在 Brooks 体系里的意义
 
 Gap 本质也是 imbalance。
 
-不是简单图形，而是：
-
-> 市场不愿在原价格充分成交。
-
----
+不是简单图形，**而是**：市场不愿在原价格充分成交。
 
 ### Gap 的意义
 
@@ -236,37 +182,23 @@ Gap 越明显：
 - follow-through 概率越高
 - second leg 概率越高
 
----
-
 ### Gap Fill（补缺口）
 
 #### gap 很快被填补
 
-说明：
-
-> 市场不接受这个价格。
-
----
+**说明**：市场不接受这个价格。
 
 #### gap 长时间不补
 
-说明：
-
-> 市场接受这个价格。
-
----
+**说明**：市场接受这个价格。
 
 ## 8. Spike and Channel
 
 这是非常核心的结构。
 
----
-
 ### Spike
 
-代表：
-
-> 强失衡。
+**代表**：强失衡。
 
 特点：
 
@@ -274,13 +206,9 @@ Gap 越明显：
 - overlap 少
 - 情绪推动
 
----
-
 ### Channel
 
-代表：
-
-> 失衡逐渐被市场消化。
+**代表**：失衡逐渐被市场消化。
 
 特点：
 
@@ -288,17 +216,11 @@ Gap 越明显：
 - pullback 增加
 - 趋势放缓
 
-但：
-
-> 控制权可能仍未改变。
-
----
+**但**：控制权可能仍未改变。
 
 ## 9. Exhaustion（衰竭）
 
-本质：
-
-> imbalance 开始耗尽。
+**本质**：imbalance 开始耗尽。
 
 表现：
 
@@ -307,17 +229,11 @@ Gap 越明显：
 - follow-through 变差
 - 大 bar 后无法继续
 
-说明：
-
-> 主动一方已经快没人了。
-
----
+**说明**：主动一方已经快没人了。
 
 ## 10. Failed Breakout（失败突破）
 
-失败 breakout：
-
-> imbalance 失败。
+**失败 breakout**：imbalance 失败。
 
 于是：
 
@@ -325,28 +241,18 @@ Gap 越明显：
 - trapped traders 止损
 - 容易形成反向腿
 
----
-
 ## 11. Always In 的本质
 
-Always In：
-
-> 当前哪边仍维持着 imbalance。
+**Always In**：当前哪边仍维持着 imbalance。
 
 直到：
 
 - 出现强反向 imbalance
 - 控制权转移
 
----
-
 ## 12. 实盘核心：市场是否接受价格
 
-真正的 PA Trader 看的是：
-
-> 市场是否接受当前价格。
-
----
+真正的 PA Trader 看的是：**市场是否接受当前价格**。
 
 ### 接受价格
 
@@ -357,8 +263,6 @@ Always In：
 - 不回区间
 - 趋势继续推进
 
----
-
 ### 不接受价格
 
 表现：
@@ -367,8 +271,6 @@ Always In：
 - 强反包
 - 回到区间
 - 双向剧烈
-
----
 
 ## 13. Breakout 实盘检查表
 
@@ -380,8 +282,6 @@ Always In：
 - 趋势？
 - Spike？
 - Channel？
-
----
 
 #### 2. breakout 位置在哪里？
 
@@ -397,8 +297,6 @@ Always In：
 - TR 中间
 - 空间不足的位置
 
----
-
 #### 3. 是否已经有 imbalance？
 
 看：
@@ -407,8 +305,6 @@ Always In：
 - 连续推进
 - overlap 是否减少
 - 是否已经出现 gap
-
----
 
 ### B. Breakout 当下
 
@@ -421,8 +317,6 @@ Always In：
 - 是否明显离开区间
 - 是否连续 trend bars
 
----
-
 #### 2. breakout 后有没有 follow-through？
 
 这是最关键的。
@@ -432,8 +326,6 @@ Always In：
 - 下一根是否继续推进
 - 是否立刻被反包
 - 是否马上回区间
-
----
 
 ### C. Pullback 阶段
 
@@ -453,15 +345,9 @@ Always In：
 - 强反向 breakout
 - 回区间内部
 
----
-
 #### 2. 控制权有没有改变？
 
-核心问题：
-
-> pullback 后，趋势方还能继续推进吗？
-
----
+**核心问题**：pullback 后，趋势方还能继续推进吗？
 
 ### D. Confirmation 阶段
 
@@ -471,8 +357,6 @@ Always In：
 - pullback 是否失败
 - breakout 是否被市场接受
 - 对手盘是否夺不回控制权
-
----
 
 ## 14. 最终一句（核心中的核心）
 

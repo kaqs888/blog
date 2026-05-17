@@ -89,15 +89,31 @@ body.is-single-post .post-content code {
   padding: 1px 6px;
   border-radius: 3px;
 }
-body.is-single-post .post-content pre,
-body.is-single-post .post-content .highlight,
+body.is-single-post .post-content .highlight {
+  background: var(--pa-bg-card-hi) !important;
+  border: 1px solid var(--pa-border);
+  border-radius: 4px;
+  padding: 14px 18px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 body.is-single-post .post-content .highlight pre {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  overflow-x: visible;
+  color: var(--pa-text);
+}
+body.is-single-post .post-content > pre {
   background: var(--pa-bg-card-hi) !important;
   color: var(--pa-text) !important;
   border: 1px solid var(--pa-border);
   border-radius: 4px;
   padding: 14px 18px;
   overflow-x: auto;
+  margin: 20px 0;
 }
 body.is-single-post .post-content pre code {
   background: transparent;

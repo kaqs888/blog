@@ -2,7 +2,7 @@
 title = "Price Action：Imbalance / Breakout / Follow-through 完整框架"
 date = 2026-05-17
 categories = ["PriceAction"]
-tags = ["PriceAction", "交易", "Brooks"]
+tags = ["PriceAction", "交易", "Al Brooks"]
 draft = false
 +++
 

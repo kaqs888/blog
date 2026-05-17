@@ -1,0 +1,8 @@
+<figure class="fig-card">
+  <img src="{{ .Get "src" }}" alt="{{ .Get "cn" }}">
+  <figcaption>
+    {{ with .Get "num" }}<span class="fig-num">{{ . }}</span>{{ end }}
+    {{ .Get "cn" }}
+    {{ with .Get "en" }}<span class="fig-en">{{ . }}</span>{{ end }}
+  </figcaption>
+</figure>

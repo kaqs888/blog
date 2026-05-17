@@ -69,4 +69,6 @@
     {{- end -}}
 
     {{ .Site.Params.extraHead | safeHTML }}
+
+    {{ partial "extra-style.html" . }}
 </head>

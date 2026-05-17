@@ -1,0 +1,175 @@
+<style>
+/* === Brooks Trilogy typography for single post pages === */
+body.is-single-post {
+  --pa-bg: #f5f1e8;
+  --pa-bg-card: #fbf8f0;
+  --pa-bg-card-hi: #f3eedf;
+  --pa-bg-tn: #f3ede0;
+  --pa-border: #d9d0bb;
+  --pa-border-hi: #b8ad94;
+  --pa-text: #2a2723;
+  --pa-text-dim: #5a5750;
+  --pa-text-faint: #8a857a;
+  --pa-accent: #b8860b;
+  --pa-accent-violet: #6b4fa3;
+  --pa-en-color: #5a6b85;
+  --pa-tn-color: #8b6f3f;
+  background: var(--pa-bg) !important;
+}
+body.is-single-post,
+body.is-single-post .dark\:bg-gray-800,
+body.is-single-post .dark\:text-gray-300,
+body.is-single-post .dark\:text-gray-100,
+body.is-single-post .dark\:text-gray-400 {
+  background-color: transparent !important;
+  color: var(--pa-text-dim) !important;
+}
+body.is-single-post section > div.rounded.shadow {
+  background: var(--pa-bg-card) !important;
+  border: 1px solid var(--pa-border);
+  box-shadow: none !important;
+}
+body.is-single-post .post-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--pa-text-dim);
+}
+body.is-single-post .post-content h1 {
+  font-size: 32px; font-weight: 600; color: var(--pa-text);
+  margin: 32px 0 8px; letter-spacing: -0.01em;
+}
+body.is-single-post .post-content h2 {
+  font-size: 22px; font-weight: 600; color: var(--pa-text);
+  margin: 48px 0 16px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--pa-border);
+}
+body.is-single-post .post-content h3 {
+  font-size: 17px; font-weight: 600; color: var(--pa-text);
+  margin: 28px 0 10px;
+}
+body.is-single-post .post-content h4 {
+  font-size: 15px; font-weight: 600; color: var(--pa-text);
+  margin: 20px 0 8px;
+}
+body.is-single-post .post-content p {
+  margin: 16px 0; color: var(--pa-text-dim); font-size: 15.5px;
+}
+body.is-single-post .post-content p strong,
+body.is-single-post .post-content li strong {
+  color: var(--pa-text); font-weight: 600;
+}
+body.is-single-post .post-content em { color: var(--pa-text); font-style: italic; }
+body.is-single-post .post-content blockquote {
+  background: var(--pa-bg-card);
+  border-left: 3px solid var(--pa-accent-violet);
+  padding: 14px 20px;
+  margin: 20px 0;
+  border-radius: 0 4px 4px 0;
+  color: var(--pa-text-dim);
+}
+body.is-single-post .post-content blockquote p { margin: 6px 0; }
+body.is-single-post .post-content ul,
+body.is-single-post .post-content ol {
+  margin: 14px 0 14px 24px; color: var(--pa-text-dim);
+}
+body.is-single-post .post-content li {
+  margin: 6px 0; font-size: 15px; line-height: 1.7;
+}
+body.is-single-post .post-content hr {
+  border: none;
+  border-top: 1px solid var(--pa-border);
+  margin: 32px 0;
+}
+body.is-single-post .post-content code {
+  font-family: Menlo, monospace;
+  font-size: 13.5px;
+  background: var(--pa-bg-card-hi);
+  color: var(--pa-text);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+body.is-single-post .post-content pre,
+body.is-single-post .post-content .highlight,
+body.is-single-post .post-content .highlight pre {
+  background: var(--pa-bg-card-hi) !important;
+  color: var(--pa-text) !important;
+  border: 1px solid var(--pa-border);
+  border-radius: 4px;
+  padding: 14px 18px;
+  overflow-x: auto;
+}
+body.is-single-post .post-content pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--pa-text);
+}
+body.is-single-post .post-content .translator-note {
+  background: var(--pa-bg-tn);
+  border: 1px dashed var(--pa-border-hi);
+  border-left: 3px solid var(--pa-tn-color);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  position: relative;
+}
+body.is-single-post .post-content .translator-note::before {
+  content: '译者注 · TRANSLATOR NOTE';
+  position: absolute; top: -10px; left: 16px;
+  background: var(--pa-bg);
+  color: var(--pa-tn-color);
+  font-family: Menlo, monospace;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+}
+body.is-single-post .post-content .quote-bi {
+  background: var(--pa-bg-card);
+  border-left: 3px solid var(--pa-accent-violet);
+  padding: 18px 22px;
+  margin: 24px 0;
+  border-radius: 0 4px 4px 0;
+}
+body.is-single-post .post-content .quote-bi .en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic; font-size: 14.5px;
+  color: var(--pa-text); line-height: 1.7;
+  margin-bottom: 8px;
+}
+body.is-single-post .post-content .quote-bi .cn {
+  font-size: 14.5px; color: var(--pa-text-dim);
+  line-height: 1.8; margin-bottom: 8px;
+}
+body.is-single-post .post-content .quote-bi .src {
+  font-family: Menlo, monospace; font-size: 11px;
+  color: var(--pa-text-faint);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+body.is-single-post .post-content .fig-card {
+  margin: 32px 0;
+  background: var(--pa-bg-card);
+  border: 1px solid var(--pa-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+body.is-single-post .post-content .fig-card img {
+  width: 100%; height: auto; display: block; background: white;
+}
+body.is-single-post .post-content .fig-card figcaption {
+  padding: 14px 20px;
+  font-size: 13.5px; color: var(--pa-text-dim);
+  background: var(--pa-bg-card-hi);
+  border-top: 1px solid var(--pa-border);
+  line-height: 1.7;
+}
+body.is-single-post .post-content .fig-card figcaption .fig-num {
+  color: var(--pa-accent); font-family: Menlo, monospace;
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: 0.1em; margin-right: 8px;
+}
+body.is-single-post .post-content .fig-card figcaption .fig-en {
+  color: var(--pa-en-color); font-family: Georgia, serif;
+  font-style: italic; font-size: 12px;
+  display: block; margin-top: 6px;
+}
+</style>

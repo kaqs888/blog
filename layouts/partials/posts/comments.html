@@ -1,0 +1,44 @@
+{{ if and .IsPage (ne .Params.comment false) -}}
+  <!-- Disqus (disabled: .Site.DisqusShortname removed in Hugo 0.157) -->
+
+  <!-- changyan -->
+  {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
+    <div id="SOHUCS" sid="{{ .RelPermalink }}"></div>
+  {{- end -}}
+
+  <!-- LiveRe -->
+  {{- if .Site.Params.livereUID -}}
+    <div id="lv-container" data-id="city" data-uid="{{ .Site.Params.livereUID }}"></div>
+  {{- end -}}
+
+  <!-- utterances -->
+  {{- if .Site.Params.utterances.owner}}
+    <script src="https://utteranc.es/client.js"
+            repo="{{ .Site.Params.utterances.owner }}/{{ .Site.Params.utterances.repo }}"
+            issue-term="{{ .Site.Params.utterances.issueterm}}"
+            theme="{{ .Site.Params.utterances.theme }}"
+            crossorigin="anonymous"
+            async>
+    </script>
+  {{- end }}
+
+  <!-- giscus -->
+  {{- if .Site.Params.giscus.repo}}
+    <script src="https://giscus.app/client.js"
+          data-repo="{{site.Params.giscus.repo}}"
+          data-repo-id="{{site.Params.giscus.repo_id}}"
+          data-category="{{site.Params.giscus.category}}"
+          data-category-id="{{site.Params.giscus.category_id}}"
+          data-mapping="{{site.Params.giscus.mapping}}"
+          data-reactions-enabled="{{site.Params.giscus.reactions_enabled}}"
+          data-theme="{{site.Params.giscus.theme}}"
+          data-lang="{{site.Params.giscus.lang}}"
+          data-loading="lazy"
+          data-emit-metadata="{{site.Params.giscus.emit_metadata}}"
+          data-input-position="top"
+          crossorigin="anonymous"
+          async>
+    </script>
+  {{- end }}
+
+{{- end }}

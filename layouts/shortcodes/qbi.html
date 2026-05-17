@@ -1,0 +1,5 @@
+<blockquote class="quote-bi">
+  {{ with .Get "en" }}<div class="en">{{ . | safeHTML }}</div>{{ end }}
+  {{ with .Get "cn" }}<div class="cn">{{ . | safeHTML }}</div>{{ end }}
+  {{ with .Get "src" }}<div class="src">{{ . }}</div>{{ end }}
+</blockquote>

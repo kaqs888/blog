@@ -1,6 +1,6 @@
 baseURL = "https://blog.gocache.top/"
 languageCode = "zh-cn"
-title = "价格行为"
+title = "以交易为生的成长过程"
 theme = "echo"
 DefaultContentLanguage = "cn"
 hasCJKLanguage = true
@@ -40,6 +40,7 @@ navItems = [
   ["首页", "/"],
   ["文章归档", "/posts.html"],
   ["标签", "/tags.html"],
+  ["分类", "/categories.html"],
   ["关于我", "/about.html"]
 ]
 

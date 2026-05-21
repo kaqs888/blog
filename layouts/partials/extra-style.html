@@ -227,6 +227,25 @@ body.is-single-post .post-content .quote-bi .src {
   color: var(--pa-text-faint);
   text-transform: uppercase; letter-spacing: 0.05em;
 }
+/* Bare images (markdown ![]()) + their italic caption paragraph */
+body.is-single-post .post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 6px;
+  border-radius: 6px;
+  border: 1px solid var(--pa-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+body.is-single-post .post-content p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--pa-text-faint);
+  margin: 0 auto 16px;
+  line-height: 1.6;
+}
 body.is-single-post .post-content .fig-card {
   margin: 32px 0;
   background: var(--pa-bg-card);
